@@ -1,0 +1,5 @@
+<% if a.trackable %>
+  added comment on the post <%= link_to a.trackable.content, post_path(a.trackable.origin) %>.
+<% else %>
+  added the story that is currently deleted.
+<% end %>

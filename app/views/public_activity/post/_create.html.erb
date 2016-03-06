@@ -1,0 +1,5 @@
+<% if a.trackable %>
+  added the post <%= link_to a.trackable.title, post_path(a.trackable) %>.
+<% else %>
+  added the story that is currently deleted.
+<% end %>

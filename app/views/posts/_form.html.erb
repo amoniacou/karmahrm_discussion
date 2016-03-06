@@ -1,0 +1,24 @@
+<%= simple_form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.input :title %>
+  <%= f.input :topic_id,collection: Topic.all %>
+  <%= f.input :content %>
+  <%# TODO: add typeahead for tags %>
+  <%= f.input :tag_list, input_html:{data:{role:'tagsinput'}} %>
+  <% if params[:reply_to_id] %>
+    <%= f.hidden_field :reply_to_id, :value => params[:reply_to_id] %>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
