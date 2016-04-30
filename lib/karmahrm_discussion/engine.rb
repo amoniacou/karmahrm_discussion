@@ -1,13 +1,13 @@
-module SimplehrDiscussion
+module KarmaHrmDiscussion
   class Engine < ::Rails::Engine
     if defined?(ActsAsPluggable)
       ::ActsAsPluggable::Plugin.register(
-        :simplehr_discussion,
+        :karmahrm_discussion,
         :collaboration, engine: self,
                         description: 'Discussion Plugin',
-                        website: 'https://github.com/tachyons/simplehr_discussion',
+                        website: 'https://github.com/tachyons/karmahrm_discussion',
                         author: 'Aboobacker MK',
-                        version: SimplehrDiscussion::VERSION,
+                        version: KarmaHrmDiscussion::VERSION,
                         settings: {
                           display_in_topbar: true
                         },

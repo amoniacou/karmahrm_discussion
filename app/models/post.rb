@@ -18,9 +18,9 @@ class Post < ActiveRecord::Base
   # acts as
   acts_as_taggable # Alias for acts_as_taggable_on :tags
   markable_as :favorite
-  searchkick if SimpleHr.search_kick_enabled?
+  searchkick if KarmaHrm.search_kick_enabled?
   # acts_as_taggable_on :tags
-  if ActsAsPluggable::Plugin.find_by_id(:simplehr_feed)
+  if ActsAsPluggable::Plugin.find_by_id(:karmahrm_feed)
     include PublicActivity::Model
     # tracked
     tracked owner: proc { |controller, _model| controller.current_user }

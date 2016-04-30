@@ -24,7 +24,6 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    authorize @post, :update?
   end
 
   # POST /posts
@@ -40,7 +39,6 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
-    authorize @post, :update?
     if @post.update(post_params)
       redirect_to @post, notice: 'Post was successfully updated.'
     else

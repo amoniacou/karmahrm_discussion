@@ -1,17 +1,17 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
-require 'simplehr_discussion/version'
+require 'karmahrm_discussion/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = 'simplehr_discussion'
-  s.version     = SimplehrDiscussion::VERSION
+  s.name        = 'karmahrm_discussion'
+  s.version     = KarmaHrmDiscussion::VERSION
   s.authors     = ['Aboobacker MK']
   s.email       = ['aboobackervyd@gmail.com']
   s.homepage    = ''
-  s.summary     = 'Summary of SimplehrDiscussion.'
-  s.description = 'Description of SimplehrDiscussion.'
+  s.summary     = 'Summary of KarmaHrmDiscussion.'
+  s.description = 'Description of KarmaHrmDiscussion.'
   s.license     = 'LGPL'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.rdoc']

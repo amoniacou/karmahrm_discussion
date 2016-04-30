@@ -1,3 +1,3 @@
-= SimplehrDiscussion
+= KarmaHrmDiscussion
 
 Discussion plugin for SimpleHRM
